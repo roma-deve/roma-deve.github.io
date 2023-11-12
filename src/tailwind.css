@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-list{
+    @apply  transition-colors duration-200 hover:bg-sky-200 hover:text-sky-900 font-semibold  px-2.5 py-0.5 rounded;
+}
+.card-cursos{
+    @apply relative flex flex-col bg-white rounded-lg  overflow-hidden shadow-md max-sm:shadow-gray-950;
+}

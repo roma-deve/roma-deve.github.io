@@ -1,0 +1,142 @@
+@import url(https://fonts.bunny.net/css?family=figtree:400,600,700);
+
+* {
+    font-family: 'Figtree', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.div:first-child.active {
+    transform: rotate(42deg);
+}
+
+.div:nth-child(2).active {
+    opacity: 0;
+}
+
+.div:last-child.active {
+    transform: rotate(-42deg);
+}
+
+.con>.div {
+    transform-origin: left;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas:
+        "aside"
+        "contenido";
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+
+.contenedor-cursos {
+    display: grid;
+    grid-template-areas:
+        "aside-cursos"
+        "contenido-cursos";
+}
+
+.contenido-cursos {
+    grid-area: contenido-cursos;
+}
+
+.aside-cursos {
+    grid-area: aside-cursos;
+}
+
+@media (min-width: 1024px) {
+    .contenedor {
+        grid-template-columns: 1fr 320px;
+        grid-template-areas:
+            "contenido aside";
+    }
+
+    .contenedor-cursos {
+        grid-template-columns: 320px 1fr;
+        grid-template-areas:
+            "aside-cursos contenido-cursos";
+    }
+}
+
+.articulos-descripcion {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cursos-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .dark body::-webkit-scrollbar-thumb {
+            background-color: rgb(10 10 10 / 1);
+            border-radius: 10px;
+        }
+
+        .dark body::-webkit-scrollbar-track {
+            background-color: rgb(38 38 38 / 1);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgb(2 132 199 / 1);
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: rgb(243 244 246 / 1);
+        } */
+.content-articulo::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content-articulo::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(2 132 199 / 1);
+}
+
+#botonArriba {
+    transition: right .3s ease;
+    right: -40px;
+    z-index: 100;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-size: 20px;
+    color: rgb(14 165 233);
+    font-weight: 900;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 25px !important;
+    /* margin-top: -35px !important; */
+}
+
+
+@media screen and (max-width: 768px) {}
+
+.dark .main-index {
+    background-image: url('https://github.githubassets.com/assets/bg-cc5aeae814b4.png');
+    background-position: center;
+    background-size: cover;
+
+}
